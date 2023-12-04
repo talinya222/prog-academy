@@ -1,0 +1,249 @@
+/* 
+&display=swap
+&subset=cyrillic-ext */
+@import url('https://fonts.googleapis.com/css?family=Roboto:regular&display=swap');
+/*--- ОБНУЛЕНИЕ СТИЛЕЙ ------------------------------------------------------------------ */
+/*========================================================================================================================================================*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+}
+body {
+	line-height: 1;
+	font-family: "Roboto", sans-serif;
+	color: rgba(0, 0, 0, 0.40);
+	background-color: #fff;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+/*========================================================================================================================================================*/
+[class*="__container"] {
+	max-width: 830px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+.page {
+}
+/*========== HEADER ==============================================================================================================================================*/
+.header {
+	padding: 65px 0px 60px 0px;
+	min-height: 37px;
+}
+.header-container {
+	max-width: 970px;
+	margin: 0 auto;
+	padding: 0px 15px;
+	font-size: 0;
+}
+.header-logo {
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 50%;
+}
+.logo {
+	display: inline-block;
+	width: 37px;
+	height: 37px;
+	max-width: 100%;
+
+}
+.header-social {
+	display: inline-block;
+	min-width: 50%;
+	text-align: right;
+
+}
+.header-social-link {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+}
+.header-social-link:not(:last-child){
+	margin: 0px 20px 0px 0px;
+}
+.header-icon {
+	vertical-align: middle;
+	max-width: 100%;
+}
+/*========== INVITE-BLOCK ==============================================================================================================================================*/
+.invite {
+	padding: 120px 0px;
+	background-color: #FAC960;
+	text-align: center;
+}
+.invite-title {
+	max-width: 90%;
+font-size: 44px;
+line-height: 122%;
+color: #8A6D2F;
+}
+.invite-title:not(:last-child),
+.invite-form:not(:last-child){
+	margin: 0px 0px 40px 0px;
+}
+.invite-form {
+}
+.invite-form-line {
+}
+.invite-input {
+	min-width: 545px;
+	min-height: 55px;
+	padding: 5px 40px;
+	vertical-align: top;
+	font-size: 30px;
+	border-radius: 2px 0px 0px 2px;
+background-color: #FFF;
+}
+.invite-input::placeholder {
+	font-size: 30px;
+	color: #999;
+}
+.invite-input:focus,
+.btn:focus {
+	outline: none;
+box-shadow: 0px 0px 1px 1px #2c2619;
+}
+.invite-btn{
+
+}
+.btn{
+padding: 5px 40px;
+font-size: 30px;
+line-height: 150%;
+border-radius: 0px 2px 2px 0px;
+color: #FFF;
+background: #A8863D;
+cursor: pointer;
+}
+/*========== SPACE-BLOCK ==============================================================================================================================================*/
+.advantage-space {
+	padding: 80px 0px;
+	text-align: center;
+	background-color: #F2F2F2;
+}
+.advantage-space__container {
+}
+.advantage-space-header {
+}
+.advantage-space .advantage-space-header:not(:last-child){
+	margin: 0px 0px 56px 0px;
+}
+.advantage-space-picture {
+}
+.advantage-space-pic,
+.advantage-access-pic {
+	max-width: 100%;
+}
+/*========== HEADER-BLOCK ==============================================================================================================================================*/
+
+.header-block {
+}
+.header-block-title {
+	font-size: 37px;
+	line-height: 97%;
+	color: rgba(0, 0, 0, 0.56);
+}
+.header-block-text {
+	font-size: 23px;
+	line-height: 130%;
+	color: rgba(0, 0, 0, 0.40);
+}
+.header-block-title:not(:last-child),
+.header-block:not(:last-child){
+	margin: 0px 0px 32px 0px;
+}
+/*========== ACCESS-BLOCK ==============================================================================================================================================*/
+.advantage-access {
+	padding: 80px 0px 20px 0px;
+	text-align: center;
+}
+.advantage-access__container {
+}
+.advantage-access-header {
+}
+.advantage-access-picture {
+}
+/*========== TELL-FRIENDS-BLOCK ==============================================================================================================================================*/
+.advantage-tell-friends {
+	padding: 60px 0px;
+	text-align: center;
+	background-color: #FAC960;
+}
+.advantage-tell-friends__container {
+}
+.advantage-tell-friends-header .header-block-title {
+	color: #8A6D2F;
+}
+.advantage-tell-friends-block{
+
+}
+.advantage-tell-friends-link {
+	display: inline-block;
+	padding: 0px 24px;
+	font-size: 17px;
+	line-height: 130%;
+	border-radius: 3px;
+	color: #999;
+border: 1px solid #758696;
+background-color: #FFF;
+}
+/*========== FOOTER ==============================================================================================================================================*/
+.footer {
+	padding: 80px 0px;
+	text-align: center;
+}
+.footer-container {
+}
+.footer-logo {
+}
+.footer-logo:not(:last-child){
+	margin: 0px 0px 40px 0px;
+}
+.footer-social {
+}
+.footer-social-link {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+}
+.footer-social-link:not(:last-child){
+	margin: 0px 22px 40px 0px;
+}
+.footer-icon {
+	max-width: 100%;
+	vertical-align: middle;
+}

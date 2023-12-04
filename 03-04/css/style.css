@@ -1,0 +1,167 @@
+/* 
+&display=swap
+&subset=cyrillic-ext */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+/*--- ОБНУЛЕНИЕ СТИЛЕЙ ------------------------------------------------------------------ */
+/*========================================================================================================================================================*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+}
+body {
+	line-height: 1;
+	font-family: "Raleway", sans-serif;
+	color: #000;
+	background-color: #f5f5f5;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+/*========================================================================================================================================================*/
+[class*="__container"] {
+	max-width: 1917px;
+	margin: 0 auto;
+	padding: 0px 96px;
+}
+/*========================================================================================================================================================*/
+.header {
+}
+.header__container {
+}
+.header-title{
+	text-align: center;
+}
+/*========= Form ===============================================================================================================================================*/
+.page-form {
+	padding: 60px 0px;
+}
+.form {
+}
+.form-line {
+}
+.form-line:not(:last-child) {
+	margin: 0px 0px 24px 0px;
+}
+.label-style {
+	vertical-align: middle;
+}
+.label-item-color {
+	vertical-align: baseline;
+  font-size: 24px;
+	color: #ff0000;
+}
+.input-style:not(.image-input) {
+	padding: 5px 20px;
+	background: #fff;
+	border: 1px solid #a2a6b0;
+	border-radius: 4px;
+	min-height: 50px;
+}
+input.color-input.input-style,
+input.range-input.input-style,
+input.file-input.input-style{
+	min-height: 0px;
+}
+.input-style:focus {
+	outline: none;
+	box-shadow: inset 0px 0px 10px 0px #acacac, 0px 0px 0px 1px rgb(134, 133, 133);
+}
+.button {
+	padding: 10px 40px;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 150%;
+	color: #fff;
+	cursor: pointer;
+	background-color: #01887a;
+	border-radius: 50px;
+}
+.button:focus {
+	outline: none;
+	box-shadow: inset 0px 0px 20px 0px #acacac, 0px 0px 0px 1px rgb(134, 133, 133);
+}
+.button-submit:not(:last-child) {
+	margin: 0px 24px 0px 0px;
+}
+/*========= Lp ===============================================================================================================================================*/
+.page-lp {
+	padding: 60px 0px;
+}
+.lp__container {
+}
+.lp-main-title {
+	font-size: 80px;
+	font-weight: 700;
+	line-height: 120%;
+	letter-spacing: -0.8px;
+}
+.lp-main-title:not(:last-child) {
+	margin: 0px 0px 96px 0px;
+}
+.lp-block {
+
+}
+.lp-block:not(:last-child) {
+	margin: 0px 0px 75px 0px;
+}
+.lp-sub-title{
+	font-size: 56px;
+font-weight: 600;
+line-height: 114%; /* 114.286% */
+letter-spacing: -0.56px;
+}
+.lp-sub-title:not(:last-child),
+.lp-text:not(:last-child) {
+	margin: 0px 0px 24px 0px;
+}
+.lp-text {
+font-size: 32px;
+line-height: 125%;
+letter-spacing: -0.32px;
+}
+.lp-img{
+	max-width: 100%;
+}
+
+/*========================================================================================================================================================*/
+.footer {
+	padding: 20px 0;
+}
+.footer-link{
+	color: #01887a;
+	text-decoration: underline;
+}
