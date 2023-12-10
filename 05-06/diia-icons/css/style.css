@@ -1,0 +1,107 @@
+/* 
+&display=swap
+&subset=cyrillic-ext */
+
+/*--- ОБНУЛЕННЯ СТИЛІВ ------------------------------------------------------------------ */
+/*========================================================================================================================================================*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+img {
+	vertical-align: top;
+}
+/* body {
+	line-height: 1;
+	font-family: "Roboto", sans-serif;
+	color: #4b4b4b;
+	background-color: #f5f5f5;
+} */
+body{
+	background-color: #E5E5E5;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+/*========================================================================================================================================================*/
+[class*="__container"] {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0px 12px;
+}
+/*========================================================================================================================================================*/
+.page {
+	padding: 50px 0px;
+}
+.page__container {
+
+}
+.diia {
+	width: 512px;
+	height: 512px;
+	padding-top: 130px;
+	text-align: center;
+	background-color: #000;
+	position: relative;
+}
+.diia img,
+.speechify img,
+.speechify-circle img{
+	max-width: 100%;
+}
+.diia img:not(:last-child){
+margin: 0px 0px 32px 0px;
+}
+.flag {
+	margin: 0 auto;
+	border-radius: 6px;
+	max-width: 15.625%;
+	min-height: 15.707%;
+	background: linear-gradient(to bottom, #2137FC 0%, #2137FC 50%, #FFCE22 50%, #FFCE22 100%);
+}
+.speechify {
+	width: 512px;
+	height: 512px;
+	background: linear-gradient(to bottom, #2137FC 0%, #2137FC 50%, #FFCE22 50%, #FFCE22 100%);
+	position: relative;
+	top: 0;
+	left: 50%;
+	transform: translate( -50%, -22.852%);
+	z-index: 2;
+}
+.speechify-icon-square {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -49%);
+}
+.speechify-circle {
+	width: 512px;
+	height: 512px;
+	padding: 34px;
+	background-color: #fff;
+	position: relative;
+	bottom: 0;
+	left: 100%;
+	transform: translate( -100%, -45.704%);
+	/* margin-left: auto; */
+}
+.bg-form {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: linear-gradient(to bottom, #2137FC 0%, #2137FC 50%, #FFCE22 50%, #FFCE22 100%);
+	position: relative;
+}
+.speechify-icon-circle {
+	position: absolute;
+	width: 81%;
+	height: 46%;
+	bottom: 5%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
