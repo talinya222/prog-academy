@@ -1,0 +1,322 @@
+/* 
+&display=swap
+&subset=cyrillic-ext */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:regular,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:regular&display=swap');
+/*--- ОБНУЛЕНИЕ СТИЛЕЙ ------------------------------------------------------------------ */
+/*=======================================================================================================================================*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+}
+body {
+	line-height: 1;
+	font-family: "Open Sans", sans-serif;
+	color: #fff;
+	background-color: #000;
+}
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+/*=======================================================================================================================================*/
+[class*="__container"] {
+	max-width: 1491px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+.sub-title {
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	color: #FFC178;
+	display: flex;
+	column-gap: 32px;
+}
+.sub-title::before{
+	content: '';
+	width: 72px;
+	height: 2px;
+	background-color: #FFC178;
+	align-self: center;
+}
+.title {
+	font-size: 64px;
+	font-weight: 700;
+	line-height: normal;
+}
+.text {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 178%; /* 177.778% */
+}
+.more {
+	font-size: 18px;
+	font-weight: 700;
+	color: #FFC178;
+	display: flex;
+	column-gap: 9px;
+align-items: center;
+}
+.more span i{
+	font-size: 24px;
+	transform: rotate(-90deg);
+}
+/*============================================================ HEADER ===================================================================*/
+.header {
+	position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+	padding: 64px 0px;
+}
+.header__container {
+	position: relative;
+	max-width: 1781px;
+	min-height: 25px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-logo {
+}
+.header-logo img{
+	max-width: 100%;
+}
+/*============================================================ MENU ===================================================================*/
+.header-menu {
+}
+.menu {
+}
+.menu-body {
+}
+.menu-list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 50px;
+}
+.menu-item {
+}
+.menu-link {
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	position: relative;
+	display: inline-block;
+}
+.menu-link::after{
+	content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  background-color: #fff;
+  height: 1px;
+	transition: all 0.3s ease 0s;
+}
+.menu-link:hover::after{
+	width: 100%;
+}
+/*=======================================================================================================================================*/
+.header-search {
+}
+.header-search-btn {
+	font-size: 17px;
+	color: #fff;
+	background-color: transparent;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	column-gap: 14px;
+}
+.header-search-icon {
+	font-size: 14px;
+}
+/*============================================================ SOCIAL ===================================================================*/
+.social {
+	position: absolute;
+	top: 72px;
+	left: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 20px;
+}
+.social-title {
+	font-size: 18px;
+	font-weight: 600;
+	writing-mode: vertical-rl;
+}
+.social-icon {
+	color: #fff;
+	font-size: 20px;
+	transition: all 0.3s ease 0s;
+}
+.social-icon:hover{
+	color: #FFC178;
+}
+/*============================================================ MAIN-BLOCK ===============================================================*/
+.page {
+	flex: 1 1 auto;
+	overflow: hidden;
+}
+/*=======================================================================================================================================*/
+.main-block {
+	min-height: 100vh;
+	display: flex;
+	padding-top: 287px;
+}
+.main-block__container {
+	flex: 1 1 auto;
+	max-width: 1781px;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.main-block-body {
+	flex: 1 1 auto;
+	max-width: 1050px;
+	margin: 0 auto;
+	padding: 0px 50px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 32px;
+}
+.main-block-sub-title {
+}
+.main-block-main-title {
+	font-size: 88px;
+	line-height: 104%;
+	text-transform: capitalize;
+}
+.main-block-main-title span{	
+	font-size: 96px;
+	font-weight: 700;
+	line-height: 104%;
+}
+.main-block-main-title:not(:last-child){
+	margin: 0px 0px 94px 0px;
+}
+.main-block-action {
+align-self: center;
+	font-size: 18px;
+	font-weight: 600;
+	display: flex;
+	column-gap: 9px;
+	align-items: flex-end;
+}
+.main-block-action span{
+	font-size: 24px;
+	font-weight: 400;
+}
+.main-block-bg {
+	position: absolute;
+  width: 100%;
+  /* height: 100%; */
+	height: calc(100vh + 358px);
+  top: 0;
+  left: 0;
+	background: linear-gradient(330deg, rgba(0, 0, 0, 0.00) 31.06%, #000 108.93%), linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 22%);
+	/* background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 22%); */
+
+}
+.main-block-bg img {
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */
+	height: calc(100vh + 358px);
+  top: 0;
+  left: 0;
+	object-fit: cover;
+	object-position: center;
+	z-index: -1; 
+}
+/*============================================================ ABOUT ====================================================================*/
+.about {
+	padding: 215px 0px 125px 0px;
+}
+.about__container {
+	position: relative;
+	z-index: 1;
+}
+.about-body {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -116px;
+}
+.about-picture-box{
+	flex: 1 1 50%;
+	padding: 0px 116px;
+}
+.about-picture {
+	position: relative;
+	padding: 0px 0px 117% 0px;
+}
+.about-picture img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.about-content {
+	flex: 1 1 50%;
+	padding: 85px 116px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 27px;
+}
+.about-sub-title {
+}
+.about-title {
+	max-width: 90%;
+}
+.about-text {
+}
+.about-more {
+}
+/*=======================================================================================================================================*/
+
