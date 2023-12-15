@@ -12,15 +12,16 @@
 
 <body>
 	<div class="wrapper">
+		<div class="bg"></div>
 		<header class="header">
 			<div class="header__container">
 				<a href="index.html" class="header-logo"><img src="img/logo-QWERy.png" alt="QWERy logotype"></a>
 				<div class="header-menu menu">
 					<nav class="menu-body">
 						<ul class="menu-list">
-							<li class="menu-item"><a href="#" class="menu-link">Information</a></li>
-							<li class="menu-item"><a href="#" class="menu-link">About us</a></li>
-							<li class="menu-item"><a href="#" class="menu-link">Culture</a></li>
+							<li class="menu-item"><a href="#" class="menu-link link-hover">Information</a></li>
+							<li class="menu-item"><a href="#" class="menu-link link-hover">About us</a></li>
+							<li class="menu-item"><a href="#" class="menu-link link-hover">Culture</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -49,15 +50,13 @@
 						<a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
 					</div>
 				</div>
-				<div class="main-block-bg"><img src="img/source-bg.png" alt="Wonderful Indonesia Beach"></div>
+				<!-- <div class="main-block-bg"><img src="img/source-bg.png" alt="Wonderful Indonesia Beach"></div> -->
 			</section>
 
 			<section class="about">
 				<div class="about__container">
 					<div class="about-body">
-						<div class="about-picture-box">
-							<div class="about-picture"><img src="img/image-about.png" alt="region of Indonesia"></div>
-						</div>
+						<div class="about-picture"><img src="img/image-about.png" alt="region of Indonesia"></div>
 						<div class="about-content">
 							<div class="about-sub-title sub-title">EAST nUSA TENGGARA</div>
 							<div class="about-title title">Have you enjoyed your holiday?</div>
@@ -70,10 +69,105 @@
 				</div>
 			</section>
 
+			<section class="bromo">
+				<div class="bromo__container">
+					<!-- Оболочка слайдера -->
+					<div class="bromo-slider">
+						<!-- Двигающееся часть слайдера -->
+						<div class="bromo-wrapper">
+							<!-- Слайд -->
+							<div class="bromo-slide">
+								<div class="bromo-picture"><img src="img/slide-1.png" alt="region of Indonesia"></div>
+								<div class="bromo-content">
+									<div class="bromo-sub-title sub-title">Bromo</div>
+									<div class="bromo-title title">Steady your steps, we will climb together!</div>
+									<div class="bromo-text text">
+										Enjoying the vast expanse of the sea of ​​​​sand, witnessing the splendor of Mount Semeru that soars into the sky, and gazing at the beauty of the sun moving out of its bed or otherwise enjoying the dim twilight from the Bromo ridge is an unforgettable experience when visiting Bromo.
+									</div>
+									<a href="#" class="bromo-more more">read more<span><i class="fa-solid fa-arrow-down"></i></span></a>
+								</div>
+							</div>
+						</div>
+						<button type="button" class="bromo-button-prev"><span class="arrow-left"></span></button>
+						<button type="button" class="bromo-button-next"><span class="arrow-right"></span></button>
+					</div>
+				</div>
+			</section>
+
+			<section class="culture">
+				<div class="culture__container">
+					<div class="culture-body">
+						<div class="culture-picture"><img src="img/image-culture.png" alt="culture of Indonesia"></div>
+						<div class="culture-content">
+							<div class="culture-sub-title sub-title">INDONESIAN CULTURE</div>
+							<div class="culture-title title">Our culture here is very friendly to people</div>
+							<div class="culture-text text">
+								known for his politeness, manners and gentleness. This becomes a characteristic when they mingle with other tribes and become basic traits that are passed down by their ancestors.
+							</div>
+							<a href="#" class="culture-more more">read more<span><i class="fa-solid fa-arrow-down"></i></span></a>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		</main>
 
 		<footer class="footer">
-
+			<div class="footer__container">
+				<div class="footer-top">
+					<a href="index.html" class="footer-logo"><img src="img/logo-QWERy.png" alt="QWERy logotype"></a>
+					<div class="footer-top-right">
+						<div class="footer-top-right-slogan">Ready to explore?</div>
+						<a href="#" class="footer-top-right-btn">Get started</a>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="footer-bottom-row footer-bottom-row-top">
+						<div class="footer-bottom-subscribe">
+							<div class="subscribe-title">Let's go on vacation, Make your day</div>
+							<form action="#" class="subscribe-form">
+								<input autocomplete="off" type="email" name="form[]" placeholder="Email address" class="subscribe-input">
+								<button class="subscribe-btn" type="submit"><span></span></button>
+							</form>
+						</div>
+						<div class="footer-bottom-catalog">
+							<ul class="services-list list">
+								<li class="services-item item">Services</li>
+								<li class="services-item item"><a href="#" class="services-link link link-hover">Email Marketing</a></li>
+								<li class="services-item item"><a href="#" class="services-link link link-hover">Campaigns</a></li>
+								<li class="services-item item"><a href="#" class="services-link link link-hover">Branding</a></li>
+								<li class="services-item item"><a href="#" class="services-link link link-hover">Offline</a></li>
+							</ul>
+							<ul class="about-list list">
+								<li class="about-item item">About</li>
+								<li class="about-item item"><a href="#" class="about-link link link-hover">Our Story</a></li>
+								<li class="about-item item"><a href="#" class="about-link link link-hover">Benefits</a></li>
+								<li class="about-item item"><a href="#" class="about-link link link-hover">Team</a></li>
+								<li class="about-item item"><a href="#" class="about-link link link-hover">Careers</a></li>
+							</ul>
+							<ul class="help-list list">
+								<li class="help-item item">Help</li>
+								<li class="help-item item"><a href="#" class="help-link link link-hover">FAQs</a></li>
+								<li class="help-item item"><a href="#" class="help-link link link-hover">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-bottom-row footer-bottom-row-middle">
+						<div class="footer-policy">
+							<a href="#" class="footer-terms link-hover">Terms &amp; Conditions</a>
+							<a href="#" class="footer-privacy link-hover">Privacy Policy</a>
+						</div>
+						<div class="footer-social">
+							<a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+							<a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+							<a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+						</div>
+					</div>
+					<div class="footer-bottom-row">
+						<div class="footer-copy">Copyright 2021 QWERy</div>
+					</div>
+				</div>
+			</div>
 		</footer>
 	</div>
 </body>
