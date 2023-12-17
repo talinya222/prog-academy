@@ -1,0 +1,386 @@
+@use "sass:math";
+/* 
+&display=swap
+&subset=cyrillic-ext */
+@import url("https://fonts.googleapis.com/css?family=Poppins:500,600,700&display=swap");
+
+// Мінімальна ширина сторінки
+$minWidth: 375;
+
+//REM
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+
+// Шрифт за замовчуванням =================================================================================================================
+$fontFamily: "Poppins", sans-serif;
+$fontSize: rem(16); // Розмір шрифта за замовчуванням з макету
+
+// Основні кольори ========================================================================================================================
+$mainColor: #fff; // Колір шрифта за замовчуванням
+$mainBlack: #000;
+$mainBg: #e0adc5;
+
+/*--- ОБНУЛЕННЯ СТИЛІВ ------------------------------------------------------------------ */
+/*=======================================================================================================================================*/
+@import "null";
+/*=======================================================================================================================================*/
+body {
+	color: $mainColor;
+	line-height: 1;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+}
+body {
+	// Скрол заблокований
+	@media (max-width: 992px) {
+		.lock & {
+			overflow: hidden;
+			touch-action: none;
+		}
+	}
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	// Притискаємо footer
+	> main {
+		flex: 1 1 auto;
+	}
+}
+/*=======================================================================================================================================*/
+[class*="__container"] {
+	max-width: rem(1330);
+	margin: 0 auto;
+	padding: 0px rem(15);
+}
+/*=======================================================================================================================================*/
+
+// Підключення загальних стилів ел-ів
+// @import "common";
+
+// Підключення стилів окремих блоків
+@import "header";
+// @import "footer";
+/*=======================================================================================================================================*/
+/*=======================================================================================================================================*/
+/*=======================================================================================================================================*/
+.page {
+	background-color: $mainBg;
+	// .page__main-block
+	&__main-block {
+	}
+}
+.main-block {
+	padding: rem(68) rem(0) rem(88) rem(0);
+	@media (max-width: 1140px) {
+		padding: rem(50) rem(0) rem(65) rem(0);
+	}
+	@media (max-width: 680px) {
+		padding: rem(32) rem(0) rem(42) rem(0);
+	}
+
+	// .main-block__container
+	&__container {
+	}
+
+	// .main-block__body
+	&__body {
+		display: flex;
+		align-items: center;
+		column-gap: rem(72);
+		@media (max-width: 1330px) {
+			column-gap: rem(50);
+		}
+		@media (max-width: 1250px) {
+			column-gap: rem(30);
+		}
+		@media (max-width: 1140px) {
+			flex-direction: column;
+			row-gap: rem(50);
+		}
+		@media (max-width: 480px) {
+			row-gap: rem(25);
+		}
+	}
+
+	// .main-block__content
+	&__content {
+		padding: 0px rem(28) 0px rem(82);
+		@media (max-width: 1330px) {
+			padding-left: rem(50);
+		}
+		@media (max-width: 1250px) {
+			padding: 0;
+		}
+		@media (min-width: 1140px) {
+			flex: 1 1 rem(560);
+		}
+		@media (max-width: 1140px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+	// .main-block__title
+	&__title {
+		font-size: rem(150);
+		font-weight: 700;
+		line-height: 100%;
+		&:not(:last-child) {
+			margin: rem(0) rem(0) rem(8) rem(0);
+		}
+		@media (min-width: 480px) and (max-width: 1140px) {
+			&:not(:last-child) {
+				margin: rem(0) rem(0) rem(20) rem(0);
+			}
+		}
+		@media (max-width: 680px) {
+			font-size: rem(100);
+		}
+		@media (max-width: 480px) {
+			font-size: rem(60);
+		}
+	}
+
+	// .main-block__text
+	&__text {
+		font-weight: 500;
+		line-height: 150%;
+		&:not(:last-child) {
+			margin: rem(0) rem(0) rem(36) rem(0);
+		}
+		@media (max-width: 480px) {
+			font-size: rem(12);
+			line-height: 133%;
+			&:not(:last-child) {
+				margin: rem(0) rem(0) rem(15) rem(0);
+			}
+		}
+	}
+
+	// .main-block__buttons
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(46);
+
+		@media (min-width: 992px) {
+			&:not(:last-child) {
+				margin: rem(0) rem(0) rem(64) rem(0);
+			}
+		}
+		@media (max-width: 480px) {
+			gap: rem(16);
+		}
+	}
+
+	// .main-block__shop
+	&__shop {
+	}
+
+	// .main-block__watch
+	&__watch {
+		display: flex;
+		column-gap: rem(8);
+		align-items: center;
+
+		&:hover {
+			.main-block__play-icon {
+				&::before {
+					background-color: $mainColor;
+				}
+				&::after {
+					border-left-color: $mainBlack;
+				}
+			}
+			.main-block__slogan {
+				border-bottom-color: $mainBlack;
+			}
+		}
+	}
+
+	// .main-block__play-icon
+	&__play-icon {
+		width: rem(50);
+		height: rem(50);
+		background-color: transparent;
+		border-radius: 50%;
+		border: 1px solid $mainBlack;
+		position: relative;
+		&::before {
+			content: "";
+			display: block;
+			width: rem(28);
+			height: rem(28);
+			border-radius: 50%;
+			background-color: $mainBlack;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: all 0.3s ease 0s;
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border-top: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+			border-left: 8px solid $mainColor;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-25%, -50%);
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	// .main-block__slogan
+	&__slogan {
+		color: $mainBlack;
+		font-weight: 500;
+		line-height: 150%;
+		text-transform: uppercase;
+		border-bottom: 1px solid transparent;
+		transition: all 0.3s ease 0s;
+		@media (max-width: 680px) {
+			display: none;
+		}
+	}
+
+	// .main-block__kettles
+	&__kettles {
+		display: flex;
+		column-gap: rem(16);
+		@media (max-width: 992px) {
+			display: none;
+		}
+	}
+
+	// .main-block__item
+	&__item {
+		width: rem(80);
+		height: rem(80);
+		border-radius: 7px;
+		border: 1px solid $mainColor;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			max-width: 100%;
+		}
+		// .main-block__item_active
+		&_active {
+			background-color: $mainColor;
+		}
+	}
+
+	// .main-block__decor
+	&__decor {
+		background: url("../img/pink.svg") 100% 50% no-repeat;
+		@media (min-width: 1140px) {
+			flex: 0 1 rem(476);
+		}
+		@media (max-width: 1140px) {
+			width: 80%;
+			text-align: center;
+		}
+		@media (max-width: 680px) {
+			width: 100%;
+		}
+		@media (max-width: 560px) {
+			background: url("../img/pink.svg") 90% 50% / contain no-repeat;
+		}
+	}
+
+	// .main-block__image
+	&__image {
+		img {
+			max-width: 100%;
+			@media (max-width: 560px) {
+				max-width: 66.25%;
+			}
+		}
+	}
+
+	// .main-block__radiobuttons
+	&__radiobuttons {
+	}
+}
+.btn {
+	font-weight: 500;
+	line-height: 150%;
+	text-transform: uppercase;
+	padding: rem(14) rem(92);
+	background-color: $mainBlack;
+	border-radius: 6px;
+	box-shadow: 0px 9px 14px 0px rgba(0, 0, 0, 0.25);
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background-color: $mainColor;
+		color: $mainBlack;
+	}
+	&:active {
+		box-shadow: none;
+		background-color: $mainColor;
+		color: $mainBlack;
+	}
+	@media (max-width: 480px) {
+		padding: rem(12) rem(50);
+	}
+}
+.radiobuttons {
+	display: flex;
+	gap: rem(8);
+	@media (min-width: 1140px) {
+		flex-direction: column;
+	}
+	// .radiobuttons__item
+	&__item {
+		position: relative;
+		input {
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+	}
+	// .radiobuttons__label
+	&__label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(10);
+		height: rem(10);
+		border: 1px solid $mainColor;
+		background-color: transparent;
+		border-radius: 50%;
+		cursor: pointer;
+		&::after {
+			content: "";
+			width: rem(6);
+			height: rem(6);
+			transition: transform 0.3s ease 0s;
+			background-color: $mainColor;
+			border-radius: 50%;
+			transform: scale(0);
+		}
+	}
+}
+
+.radiobuttons__input:focus + .radiobuttons__label {
+	outline: none;
+}
+.radiobuttons__input:checked + .radiobuttons__label::after {
+	transform: scale(1);
+}

@@ -1,0 +1,1 @@
+.header{color:#000;background-color:#fff}.header__container{min-height:rem(70);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:rem(20)}.header__logo img{max-width:100%}.menu__list{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;-moz-column-gap:rem(39);column-gap:rem(39)}
