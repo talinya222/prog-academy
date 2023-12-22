@@ -1,0 +1,87 @@
+.header {
+	padding: rem(17) rem(0) rem(54);
+	@media (max-width: 768px) {
+		padding-bottom: rem(25);
+	}
+	@media (max-width: 480px) {
+		padding-bottom: rem(20);
+	}
+	// .header__container
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(20);
+		min-height: rem(54);
+		@media (max-width: 768px) {
+		}
+	}
+
+	// .header__logo
+	&__logo {
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: 768px) {
+			order: 1;
+		}
+	}
+
+	// .header__menu
+	&__menu {
+	}
+
+	// .header__button
+	&__button {
+		padding: rem(12) rem(26);
+		@media (max-width: 768px) {
+			order: 2;
+		}
+	}
+}
+.menu {
+	@media (max-width: 768px) {
+		order: 3;
+		flex: 1 1 100%;
+	}
+	// .menu__body
+	&__body {
+	}
+
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: rem(25);
+		row-gap: rem(20);
+		@media (max-width: 768px) {
+			justify-content: center;
+		}
+	}
+
+	// .menu__item
+	&__item {
+	}
+
+	// .menu__link
+	&__link {
+		font-size: rem(18);
+		font-weight: 600;
+		text-transform: capitalize;
+		color: $mainColor;
+		transition: color 0.3s ease 0s;
+		// .menu__link_active
+		&_active {
+			color: $mainContrast;
+		}
+		&:not(.menu__link_active):hover {
+			color: $mainContrast;
+		}
+		@media (max-width: 768px) {
+			display: block;
+			padding: rem(11);
+			font-size: rem(16);
+		}
+	}
+}
