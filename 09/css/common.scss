@@ -1,0 +1,38 @@
+.title {
+	font-size: rem(40);
+	font-weight: 700;
+	line-height: normal;
+	color: $mainColor;
+	span {
+		color: $mainContrast;
+	}
+}
+.slogan-style {
+	font-size: rem(24);
+	font-weight: 700;
+	line-height: normal;
+	color: $mainColor;
+	position: relative;
+	display: inline-block;
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: rem(5);
+		bottom: rem(-5);
+		left: 0;
+		background-color: $contrast;
+		transition: all 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:not(.item-collection__title):hover::after {
+			background-color: $mainContrast;
+		}
+	}
+	@media (max-width: rem(480)) {
+		&:not(.item-collection__title) {
+			font-size: rem(20);
+		}
+	}
+}

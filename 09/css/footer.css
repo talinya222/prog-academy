@@ -1,0 +1,1 @@
+.footer{padding:rem(120) 0;background:url("../img/footer-bg.png") 0 0/cover no-repeat}.footer__title:not(:last-child){margin:rem(0) rem(0) rem(120) rem(0)}.top-footer{display:flex;flex-wrap:wrap;gap:rem(68)}.top-footer__body{flex:1 1 50%}.cards-top-footer{display:flex;flex-wrap:wrap;margin:0px rem(-34)}.cards-top-footer__card{padding:0px rem(34);flex:0 0 33.333%}

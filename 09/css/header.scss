@@ -1,0 +1,99 @@
+.header {
+	position: absolute;
+	width: 100vw;
+	min-height: rem(35);
+	top: 0;
+	left: 0;
+	z-index: 2;
+	padding: rem(40) 0;
+	@media (max-width: rem(992)) {
+		padding: rem(15) 0;
+	}
+	// .header__container
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(20);
+		@media (max-width: rem(992)) {
+			justify-content: space-between;
+		}
+	}
+
+	// .header__image
+	&__image {
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: rem(992)) {
+			order: 1;
+		}
+	}
+
+	// .header__menu
+	&__menu {
+	}
+
+	// .header__btn
+	&__btn {
+		font-size: rem(24);
+		font-weight: 700;
+		color: $mainContrast;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $contrast;
+			}
+		}
+		@media (max-width: rem(992)) {
+			order: 2;
+		}
+	}
+}
+.menu {
+	flex: 1 1 auto;
+	@media (max-width: rem(992)) {
+		order: 3;
+		flex: 1 1 100%;
+	}
+	// .menu__body
+	&__body {
+	}
+
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: rem(18);
+	}
+
+	// .menu__item
+	&__item {
+	}
+
+	// .menu__link
+	&__link {
+		font-size: rem(24);
+		color: $mainWhite;
+		transition: color 0.3s ease 0s;
+		// .menu__link_active
+		&_active {
+			color: $mainContrast;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainContrast;
+			}
+		}
+		@media (max-width: rem(992)) {
+			display: inline-block;
+			padding: rem(5);
+		}
+		@media (max-width: rem(768)) {
+			font-size: rem(20);
+			padding: rem(10);
+		}
+	}
+}
