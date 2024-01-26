@@ -1,0 +1,269 @@
+@use "sass:math";
+/* 
+&display=swap
+&subset=cyrillic-ext */
+@font-face {
+	font-family: "YuGothic";
+	src: url("../fonts/Yu_Gothic_Medium.woff2") format("woff2"), url("../fonts/Yu_Gothic_Medium.woff") format("woff");
+	font-weight: medium;
+	font-style: normal;
+	font-display: swap;
+}
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light:regular&display=swap");
+
+// Мінімальна ширина сторінки
+$minWidth: 360;
+// Ширина контейнера
+// $maxWidthContainer: 1637;
+// $containerPadding: 30;
+// $containerWidth: $maxWidthContainer + $containerPadding;
+
+//REM
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+
+// Шрифт за замовчуванням =================================================================================================================
+$fontFamily: "YuGothic", sans-serif;
+$fontFamilyTitle: "Shadows Into Light", sans-serif;
+$fontSize: rem(16); // Розмір шрифта за замовчуванням з макету
+
+// Основні кольори ========================================================================================================================
+$mainColor: #000; // Колір шрифта за замовчуванням
+$mainWhite: #fff;
+$mainContrast: #668e68;
+$newsBgColor: rgba(129, 97, 59, 0.2);
+
+/*--- ОБНУЛЕННЯ СТИЛІВ ------------------------------------------------------------------ */
+/*=======================================================================================================================================*/
+@import "null";
+/*=======================================================================================================================================*/
+body {
+	color: $mainColor;
+	line-height: 1;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+
+	// Притискаємо footer
+	> main {
+		flex: 1 1 auto;
+	}
+}
+/*=======================================================================================================================================*/
+// [class*="__container"] {
+// 	max-width: rem($containerWidth);
+// 	margin: 0 auto;
+// 	// padding: 0px rem(15);
+// 	padding: 0 rem(math.div($containerPadding, 2));
+// }
+header nav .custom-container,
+.page .custom-container,
+.footer .custom-container {
+	@media (min-width: rem(1200)) {
+		padding: 0 rem(15);
+	}
+	@media (min-width: rem(1400)) {
+		padding: 0 rem(105);
+	}
+}
+
+/*=======================================================================================================================================*/
+
+// Підключення загальних стилів ел-ів
+//@import "common";
+
+// Підключення стилів окремих блоків
+// @import "header";
+// @import "footer";
+/*======================================================================================================================================*/
+/*======================================================================================================================================*/
+/*======================================================================================================================================*/
+nav {
+	background-color: $mainContrast;
+}
+.navbar-brand {
+	img {
+		max-width: 100%;
+	}
+}
+.nav-item {
+	&:not(:last-child) {
+		margin-right: rem(36);
+	}
+	@media (max-width: rem(992)) {
+		&:not(:last-child) {
+			margin-right: rem(20);
+		}
+	}
+}
+.nav-link.menu-link-style {
+	font-size: rem(18);
+	line-height: normal;
+	// color: #fff;
+}
+/*======================================================================================================================================*/
+.main-block {
+	padding-top: rem(70);
+	min-height: rem(520);
+	background: url("../img/main-block-bg.jpg") 50% 50% / cover no-repeat;
+	@media (max-width: rem(768)) {
+		min-height: rem(400);
+	}
+	// @media (max-width: rem(576)) {
+	// 	min-height: rem(300);
+	// }
+}
+.main-title {
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+	font-family: $fontFamilyTitle;
+	font-size: rem(110);
+	line-height: normal;
+	// color: #fff;
+}
+/*======================================================================================================================================*/
+.page .cards-block {
+	padding: rem(60) 0;
+	@media (max-width: rem(768)) {
+		padding: rem(40) 0;
+	}
+}
+.cards-row {
+	@media (max-width: rem(992)) {
+		justify-content: center !important;
+	}
+}
+.cards-body {
+	@media (max-width: rem(992)) {
+		width: 50% !important;
+	}
+	@media (max-width: rem(576)) {
+		width: 100% !important;
+	}
+}
+.cards-img {
+	img {
+		width: 100%;
+	}
+	position: relative;
+	&::before {
+		content: "";
+		display: block;
+		background-color: rgba(255, 255, 255, 0.8);
+		position: absolute;
+		width: 100%;
+		height: rem(91);
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+	}
+	&::after {
+		content: "";
+		display: block;
+		border: 9px solid #81613b;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		border-radius: 50%;
+	}
+}
+.cards-title {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: rem(26);
+	line-height: normal;
+	padding: rem(23) 0 rem(38) 0;
+	margin-top: rem(-91);
+	position: relative;
+	z-index: 3;
+}
+.my-button {
+	&::after {
+		content: "";
+		display: block;
+		border: solid $mainWhite;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: rotate(-45deg);
+		margin-left: 10px;
+	}
+}
+.btn-custom-bg {
+	background-color: $mainContrast !important;
+}
+/*======================================================================================================================================*/
+.about {
+	background: url("../img/about-block-bg.jpg") 50% 50% / cover no-repeat;
+}
+.about-title {
+	font-family: $fontFamilyTitle;
+	font-size: rem(40);
+	line-height: 87%; /* 87.5% */
+}
+.about-sub-title {
+	font-family: $fontFamily;
+	font-size: rem(20);
+	font-weight: 500;
+	line-height: 87%;
+}
+.about-text {
+	max-width: rem(370);
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+	font-size: rem(20);
+	font-weight: 500;
+	line-height: 130%;
+}
+/*======================================================================================================================================*/
+.news {
+	background-color: $newsBgColor;
+}
+.news-title {
+	font-family: $fontFamilyTitle;
+	font-size: rem(40);
+	line-height: 87%; /* 87.5% */
+}
+.news-sub-title {
+	font-family: $fontFamily;
+	font-size: rem(20);
+	font-weight: 500;
+	line-height: 87%; /* 87.5% */
+}
+.news-info {
+	border: 1px solid $mainContrast;
+}
+.news-line {
+	&:not(:last-child) {
+		margin-bottom: rem(10);
+	}
+}
+.news-date {
+	min-width: 100px;
+}
+/*======================================================================================================================================*/
+.footer {
+	min-height: rem(180);
+}
+.footer-link {
+	font-weight: 500;
+	line-height: 156%; /* 156.25% */
+}
+.footer-copy {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: normal;
+}
+.to-top {
+	position: fixed;
+	bottom: rem(21);
+	right: rem(21);
+	z-index: 50;
+}
