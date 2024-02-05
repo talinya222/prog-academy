@@ -105,19 +105,17 @@ console.log(tempResult);
 */
 //=============== Task 8 (additional): A program for checking the user's age and country of residence =====================================
 /*
-let yourAge = Number(prompt("Вкажіть свій вік"));
+let yourAge = parseInt(prompt("Вкажіть свій вік"));
 let yourCountry = prompt("Вкажіть свою країну народження");
 yourCountry = yourCountry.toLowerCase();
 
 console.log(yourAge);
 console.log(yourCountry);
 
-if (yourAge >= 18) {
-	if (yourCountry === 'україна' || yourCountry === 'ukraine') {
-		console.log('Вітаємо, ви маєте право голосу в Україні');
-	} else {
-		console.log('Перевірте правила голосування у вашій країні');
-	}
+if (yourAge >= 18 && yourCountry === 'україна' || yourCountry === 'ukraine') {
+	console.log('Вітаємо, ви маєте право голосу в Україні');
+} else if (yourAge >= 18) {
+	console.log('Перевірте правила голосування у вашій країні');
 } else {
 	console.log('Ви ще занадто молоді для голосування');
 };
