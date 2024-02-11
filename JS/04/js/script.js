@@ -1,6 +1,6 @@
 //======================= Homework №4 =====================================================================================================
 //=============== Task 1: Callback function ========================================================
-
+/*
 const userNames = ['Gabriel', 'Odval', 'Emilija', 'Sou'];
 
 let hiUser = function (user) {
@@ -16,7 +16,7 @@ let wellcomUser = function (array, sayHi) {
 };
 
 wellcomUser(userNames, hiUser);
-
+*/
 //=============== Task 2: Arrow functions ========================================================
 /*
 const multiplyValues = (a, b, c) => a * b * c;
@@ -115,17 +115,15 @@ for (let i = 0; i < checkArr.length; i++) {
 console.log(checkArr);
 */
 //=============== Task 3 ========================================================
-/*
+
 let days = ["Понеділок", "Середа", "Неділя"];
 let plans = ["Урок 03", "Урок 04", "Вихідний"];
 
 let getPlans = function (arr1, arr2) {
 
-	for (var i = 0; i < arr1.length; i++) {
-		let el1 = arr1.indexOf(arr1[i]);
-		for (var j = 0; j < arr2.length; j++) {
-			let el2 = arr2.indexOf(arr2[j]);
-			if (el2 === el1) {
+	for (let i = 0; i < arr1.length; i++) {
+		for (let j = 0; j < arr2.length; j++) {
+			if (i === j) {
 				console.log(`Сьогодні ${arr1[i]} у вас такі плани ${arr2[j]}`);
 			}
 		}
@@ -134,4 +132,24 @@ let getPlans = function (arr1, arr2) {
 };
 
 getPlans(days, plans);
-*/
+
+console.log('----------- Version 2 ----------');
+
+let getPlansAgain = function (arr1, arr2) {
+	let arrayLength;
+	arr1.length === arr2.length ? arrayLength = arr1.length : false;
+
+	for (let i = 0; i < arrayLength; i++) {
+		const el1 = arr1[i];
+		const el2 = arr2[i];
+		const indexes1 = arr1.indexOf(el1);
+		const indexes2 = arr2.indexOf(el2);
+
+		if (indexes1 === indexes2) {
+			console.log(`Сьогодні ${el1} у вас такі плани ${el2}`);
+		}
+	}
+};
+
+getPlansAgain(days, plans);
+
