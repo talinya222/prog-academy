@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<script src="js/script.js"></script>
+	<title>Hw_5</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+
+			</div>
+		</header>
+
+		<main class="page">
+			<h2>Домашня робота №5:</h2>
+			<ol class="hw__list">
+				<li class="hw__item">
+					Перепишіть цей код використовуючи let const ~ замість var
+					<ul>
+						<li>
+							<pre>
+								for (var i = 0; i < 5; i++) {
+									console.log(i);
+								}
+							</pre>
+						</li>
+						<li>
+							<pre>
+								var message = 'test';
+								function example() {
+										if (true) {
+												var message = 'Hello, world!';
+												console.log(message);
+										}
+										console.log(message); // Виведе 'Hello, world!'
+								}
+							</pre>
+						</li>
+					</ul>
+				</li>
+				<li class="hw__item">
+					Використовуючи for in виведіть значення з обєктку в console.log
+					<pre>
+						const person = {
+							name: 'John',
+							age: 25,
+							occupation: 'Developer'
+						};
+					</pre>
+				</li>
+				<li class="hw__item">
+					Використовуючи for of та for in виведіть занчення з обєктів які знаходяться в масиві
+					<pre>
+						const students = [
+							{ name: 'Alice', age: 20, grade: 'A' },
+							{ name: 'Bob', age: 22, grade: 'B' },
+							{ name: 'Charlie', age: 21, grade: 'C' }
+						];
+					</pre>
+				</li>
+				<li class="hw__item">
+					Завдання на map
+					<ul>
+						<li>Створіть масив чисел і використайте метод map, щоб створити новий масив, який містить квадрати кожного числа.</li>
+						<li>Напишіть функцію, яка приймає масив і функцію-перетворювач, і використовує map для створення нового масиву, в якому кожен елемент отримує стрінг до значення 'new value'</li>
+					</ul>
+				</li>
+				<li class="hw__item">
+					Напишіть функцію, яка використовує forEach для обчислення суми всіх елементів у масиві чисел.
+					Масив наприклад
+					<pre>const numberArr = [10,20,30];</pre>
+				</li>
+				<li>
+					<strong>Додаткова робота:</strong>
+					<ul>
+						<li>Колбек функції: Створіть функцію калькулятор яка отримує 2 значення і колбек функцію дії, далі в залежності від знаку ми викликаємо нашу функцію з данними наприклад calculatorFn(2,3, summ).</li>
+						<li>Колбек функції: Створіть функцію modifyArray яка приймає массив та колбек функцію та повертає новий массив в якому кожне значення массиву змінене колбек функціє. ( наприклад помножене на 2 )</li>
+						<li>Напишіть функцію, яка використовує forEach для створення масиву, що містить лише унікальні елементи вихідного масиву.
+							Тобто якщо предаєте
+							<pre>numberArr = [10,20,30, 20, 10]</pre> отримуєте
+							<pre>numberArr = [10,20,30]</pre>
+						</li>
+						<li>Напишіть функцію, що приймає масив чисел і колбек-функцію. Функція повинна використовувати for...of для обходу по масиву та викликати колбек-функцію для кожного елемента.
+							Колбек-функція повинна повертати true або false, вказуючи, чи слід включити поточний елемент до нового масиву.
+
+							Передавши масив [1, 2, 3, 4, 5] і колбек-функція, що відбирає парні числа.
+
+							повині отримати новий масив з парними числами [2, 4].</li>
+					</ul>
+				</li>
+			</ol>
+		</main>
+
+		<footer class="footer">
+
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
