@@ -1,7 +1,7 @@
 //======================= Homework №6 ====================================================================================================
 //=============== Task 1: Creating a class and an object ========================================================
 //=============== Task 2: Class methods ========================================================
-/*
+
 class Person {
 	constructor(name, age) {
 		this._name = name;
@@ -37,7 +37,7 @@ Student Age: ${this._age}
 let student = new Student('Joey', 31, 'S-12345');
 student.studentInfo();
 console.log(student);
-*/
+
 //=============== Task 4: forEach, reverse ========================================================
 /*
 const numbers = [1, 2, 3, 4, 5];
@@ -84,7 +84,7 @@ console.log(integers);
 //=====================================================================================================================================
 //=============== Additional work =============================================
 //=============== Task 1: Guess the number. ==================================
-
+/*
 let userNumber = parseInt(prompt('Введіть будь-яке число в діапазоні від 1 до 20'));
 
 function getRandomIntNumber(min, max) {
@@ -134,7 +134,7 @@ let guessNumber = (number) => {
 };
 
 guessNumber(userNumber);
-
+*/
 //=============== Task 2: Rock-paper-scissors. ==================================
 /*
 function getRandomIntNumber(min, max) {
