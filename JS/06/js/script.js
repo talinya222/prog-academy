@@ -147,12 +147,12 @@ let randomChoice = getRandomIntNumber(1, 3);
 //=======================================================================================================================================
 let userChoice = prompt('Оберіть камінь👊, ножиці✌️ чи папір🫲 (напишіть свій вибір словом "камінь", "ножиці", "папір")');
 
-if (userChoice) {
+if (userChoice === null || userChoice === '') {
+	console.log('Нажаль ви нічого не обрали');
+} else {
 	userChoice = userChoice.toLowerCase();
 	console.log(`Вибір користувача: ${userChoice}`);
-} else if (userChoice === null || userChoice === '') {
-	console.log('Нажаль ви нічого не обрали');
-}
+};
 //=======================================================================================================================================
 if (randomChoice === 1) {
 	randomChoice = 'камінь';
@@ -160,7 +160,7 @@ if (randomChoice === 1) {
 } else if (randomChoice === 2) {
 	randomChoice = 'ножиці';
 	console.log(`Вибір компа: ${randomChoice}`);
-} else if (randomChoice === 3) {
+} else {
 	randomChoice = 'папір';
 	console.log(`Вибір компа: ${randomChoice}`);
 };
@@ -179,4 +179,72 @@ let gameStart = (choice) => {
 };
 
 gameStart(userChoice);
+*/
+//=============== Task 2: Rock-paper-scissors_v2.0 ==================================
+/*
+const defaultValues = {
+	1: "камінь",
+	2: "ножиці",
+	3: "папір"
+};
+
+// const winningConditions = {
+// 	камінь: ['ножиці', 'scissors'],
+// 	ножиці: ['папір', 'paper'],
+// 	папір: ['камінь', 'rock'],
+// };
+const winningConditions = {
+	камінь: 'ножиці',
+	ножиці: 'папір',
+	папір: 'камінь'
+};
+//=============== Getting a random number from 1 to 3 ==================================
+function getRandomIntNumber(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+let randomChoice = getRandomIntNumber(1, 3);
+
+//=============== Getting the value from the user ==================================
+let userChoice = prompt('Оберіть камінь👊, ножиці✌️ чи папір🫲 (напишіть свій вибір словом "камінь", "ножиці", "папір")');
+
+if (userChoice === null || userChoice === '') {
+	console.log('Нажаль ви нічого не обрали');
+} else {
+	userChoice = userChoice.toLowerCase();
+	console.log(`Вибір користувача: ${userChoice}`);
+};
+
+//=============== Getting the value from the robot ==================================
+
+let getCompChoice = (number, obj) => {
+	for (const key in obj) {
+		if (number == key) {
+			return obj[key];
+		}
+	}
+};
+
+
+let robotChoice = getCompChoice(randomChoice, defaultValues);
+console.log(`Вибір компа: ${robotChoice}`);
+
+//=============== Let the game begin ==================================
+let gameStart = (userValue, robotValue, winObj) => {
+	for (const key in winObj) {
+		// console.log(key, winObj[key]);
+		if (userValue === robotValue) {
+			return console.log('Ого нічія!');
+		} else if (key === userValue && winObj[key] === robotValue) {
+			return console.log('Ви виграли');
+		} else if (key === userValue && winObj[key] !== robotValue) {
+			return console.log('Нажаль ви програли');
+		} else {
+			return console.log('Наврядче цим ви зіграєте в камінь-ножиці-папір');
+		}
+	}
+};
+gameStart(userChoice, robotChoice, winningConditions);
 */
