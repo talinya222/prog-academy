@@ -41,6 +41,10 @@ console.log(student);
 //=============== Task 4: forEach, reverse ========================================================
 /*
 const numbers = [1, 2, 3, 4, 5];
+
+const reversed = numbers.reverse();
+console.log(`Reversed array: ${reversed}`);
+
 const reverseNumbers = [];
 
 numbers.forEach((item, index, arr) => {
