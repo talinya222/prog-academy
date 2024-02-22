@@ -6,6 +6,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
 	<title>Hw_7</title>
+	<style type="text/css">
+		ol li:not(li.additional) {
+			list-style-position: inside;
+		}
+
+		li.additional,
+		li.additional ol li {
+			list-style-type: none;
+		}
+
+		ol li.additional {
+			counter-reset: clause;
+		}
+
+		ol li.additional:before {
+			counter-increment: clause 7;
+			content: counter(clause)".";
+		}
+
+		ol ol {
+			counter-reset: subclause;
+		}
+
+		ol ol li:before {
+			counter-increment: subclause;
+			content: counter(clause) "." counter(subclause);
+		}
+	</style>
+
 </head>
 
 <body>
@@ -59,24 +88,20 @@
 				<li class="hw__item">
 					Створіть на сторінці елемент який вибирається ціми селекторами <br>
 					<pre>let listItems = document.querySelectorAll('ul.nav > li');</pre>
-					<pre>let listItem = document.querySelectorAll('li:nth-child(2)');</pre> <br>
-					<h2>Приклад списку для цього завдання:</h2>
+					<pre>let listItem = document.querySelectorAll('li:nth-child(2)');</pre>
 				</li>
-				<li class="hw__item">
+				<li class="hw__item additional">
 					<strong>Додаткова робота:</strong>
-					<ul>
+					<ol>
 						<li>
-							Вгадай число <br>
-							Гравець має вгадати число, яке програма випадково генерує в заданому діапазоні від 1до 20.
-							Після кожної спроби програма повідомляє, чи є загадане число більшим чи меншим від введеного.
-							Гра триває до вгадування числа.
+							Визначення Частоти Слова у Рядку <br>
+							Створіть функцію, яка приймає рядок та слово, і повертає кількість разів, скільки це слово зустрічається у рядку.
 						</li>
 						<li>
-							Камінь-ножиці-папір <br>
-							Гравець вводить свій вибір, а програма генерує власний випадковим чином.
-							Потім визначається переможець за традиційними правилами гри.
+							Заміна Першої Букви Кожного Слова на Велику <br>
+							Розробіть функцію, яка перетворює першу букву кожного слова у рядку на велику, залишаючи решту букв маленькими.
 						</li>
-					</ul>
+					</ol>
 				</li>
 			</ol>
 		</main>
