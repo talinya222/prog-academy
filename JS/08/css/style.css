@@ -1,0 +1,134 @@
+/* 
+&display=swap
+&subset=cyrillic-ext */
+
+/*--- ОБНУЛЕННЯ СТИЛІВ ------------------------------------------------------------------ */
+/*=======================================================================================================================================*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+}
+html {
+}
+body {
+	line-height: 1;
+	font-family: "Arial", sans-serif;
+	color: #4b4b4b;
+	background-color: #f5f5f5;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper 	> main {
+	flex: 1 1 auto;
+}
+/*=======================================================================================================================================*/
+[class*="__container"] {
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+.text {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 178%;
+}
+
+/*============================================================ HEADER ===================================================================*/
+.header {
+
+}
+.header__container {
+	min-height: 25px;
+}
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: 50px;
+}
+.menu__item {
+}
+.menu__link {
+	font-size: 18px;
+	font-weight: 600;
+	position: relative;
+	display: inline-block;
+	color: #4b4b4b;
+}
+.menu__link::after{
+	content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  background-color: #4b4b4b;
+  height: 1px;
+	transition: all 0.3s ease 0s;
+}
+.menu__link:hover::after{
+	width: 100%;
+}
+/*=======================================================================================================================================*/
+.page {
+}
+.page__book-info {
+}
+.page__colored-blocks {
+}
+/*=======================================================================================================================================*/
+.table-block {
+	padding: 50px 0px;
+}
+.table-block__container {
+}
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+td, th {
+	width: 30%;
+	padding: 3px;
+	border: 1px solid black;
+}
+th {
+	background: #bee1e5;
+	padding: 8px;
+}
+/*=======================================================================================================================================*/
+
