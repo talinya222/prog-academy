@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<title>Hw_7</title>
+	<style type="text/css">
+		ol li:not(li.additional) {
+			list-style-position: inside;
+		}
+
+		li.additional,
+		li.additional ol li {
+			list-style-type: none;
+		}
+
+		ol li.additional {
+			counter-reset: clause;
+		}
+
+		ol li.additional:before {
+			counter-increment: clause 7;
+			content: counter(clause)".";
+		}
+
+		ol ol {
+			counter-reset: subclause;
+		}
+
+		ol ol li:before {
+			counter-increment: subclause;
+			content: counter(clause) "." counter(subclause);
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+
+			</div>
+		</header>
+
+		<main class="page">
+			<h2>Домашня робота №7:</h2>
+			<ol class="hw__list">
+				<li class="hw__item">
+					Створіть рядок, який містить слова, розділені пробілами. <br>
+					Використайте метод split, щоб розбити рядок на масив слів. <br>
+					Виведіть отриманий масив у консоль у верхньому регістрі.
+				</li>
+				<li class="hw__item">
+					Перевірка Високосного Року <br>
+					Реалізуйте функцію, яка перевіряє, чи є рік, заданий датою, високосним.
+				</li>
+				<li class="hw__item">
+					Отримання Назви Місяця <br>
+					Напишіть функцію, яка приймає об'єкт Date і повертає назву місяця англійською мовою.
+				</li>
+				<li class="hw__item">
+					Додавання Днів до Дати <br>
+					Створіть функцію, яка додає певну кількість днів до заданої дати і повертає нову дату.
+				</li>
+				<li class="hw__item">
+					Створіть список ul з 5 елементами li всередині.<br>
+					<ul>
+						<li>
+							За допомогою querySelector виберіть:
+							<ul>
+								<li>перший елемент списку</li>
+								<li>останній елемент списку</li>
+								<li>3-й елемент списку</li>
+							</ul>
+						</li>
+						<li>
+							За допомогою querySelectorAll виберіть:
+							<ul>
+								<li>всі елементи li в списку</li>
+								<li>конвертуйте вибрані елменти в массив</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="hw__item">
+					Створіть на сторінці елемент який вибирається ціми селекторами <br>
+					<pre>let listItems = document.querySelectorAll('ul.nav > li');</pre>
+					<pre>let listItem = document.querySelectorAll('li:nth-child(2)');</pre>
+				</li>
+				<li class="hw__item additional">
+					<strong>Додаткова робота:</strong>
+					<ol>
+						<li>
+							Визначення Частоти Слова у Рядку <br>
+							Створіть функцію, яка приймає рядок та слово, і повертає кількість разів, скільки це слово зустрічається у рядку.
+						</li>
+						<li>
+							Заміна Першої Букви Кожного Слова на Велику <br>
+							Розробіть функцію, яка перетворює першу букву кожного слова у рядку на велику, залишаючи решту букв маленькими.
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</main>
+
+		<footer class="footer">
+
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
