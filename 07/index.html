@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/fdce8b0be9.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>SMEG Kettles</title>
 </head>
 
@@ -48,10 +48,10 @@
 								</a>
 							</div>
 							<div class="main-block__kettles">
-								<a href="#" class="main-block__item"><img src="img/kettles/01.png" alt="blue SMEG kettle"></a>
+								<!-- <a href="#" class="main-block__item"><img src="img/kettles/01.png" alt="blue SMEG kettle"></a>
 								<a href="#" class="main-block__item"><img src="img/kettles/02.png" alt="red SMEG kettle"></a>
 								<a href="#" class="main-block__item main-block__item_active"><img src="img/kettles/03.png" alt="pink SMEG kettle"></a>
-								<a href="#" class="main-block__item"><img src="img/kettles/04.png" alt="beige SMEG kettle"></a>
+								<a href="#" class="main-block__item"><img src="img/kettles/04.png" alt="beige SMEG kettle"></a> -->
 							</div>
 						</div>
 						<div class="main-block__decor">
@@ -79,13 +79,43 @@
 				</div>
 			</div>
 
+			<div class="page__counter counter-block" style="padding-bottom: 100px;">
+				<div class="counter-block__container">
+					<p class="counter-block__body" style="text-align: center; margin-bottom: 15px; max-width: 260px;">0</p>
+					<button class="counter-block__btn btn">Counter</button>
+				</div>
+			</div>
+			<div class="page__remove-text text-remove" style="padding-bottom: 100px;">
+				<div class="text-remove__container">
+				</div>
+			</div>
+			<div class="page__square square" style="padding-bottom: 100px;">
+				<div class="square__container">
+					<h2 style="font-weight: 500; line-height: 150%; text-transform: uppercase; padding-bottom: 15px;">Завдання 'keyup'</h2>
+					<div class="square__body"></div>
+				</div>
+			</div>
+			<div class="page__target-btn target-btn" style="padding-bottom: 100px;">
+				<div class="target-btn__container">
+					<h2 style="font-weight: 500; line-height: 150%; text-transform: uppercase; padding-bottom: 15px;">event.target</h2>
+					<button class="target-btn__btn btn" id="first-btn">first-btn</button>
+					<button class="target-btn__btn btn" id="second-btn">second-btn</button>
+					<button class="target-btn__btn btn" id="third-btn">third-btn</button>
+				</div>
+			</div>
+			<div class="page__square-mouse square-mouse" style="padding-bottom: 100px;">
+				<div class="square-mouse__container">
+					<h2 style="font-weight: 500; line-height: 150%; text-transform: uppercase; padding-bottom: 15px;">'onMouseDown' і 'onMouseUp'</h2>
+					<div class="square-mouse__body"></div>
+				</div>
+			</div>
 		</main>
 
 		<footer class="footer">
 
 		</footer>
 	</div>
-	<script src="js/script.js"></script>
+	<script type="module" src="js/script.js"></script>
 </body>
 
 </html>
