@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>HW_11</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="page__converter currency-converter">
+				<div class="currency-converter__container">
+					<div class="currency-converter__title">Currency Converter</div>
+					<form action="#" class="currency-converter__form form-converter">
+						<div class="form-converter__body">
+							<div class="form-converter__line">
+								<input autocomplete="off" type="text" value="1" name="form[]" placeholder="" class="form-converter__input form-converter__input_from">
+								<div class="form-converter__select-block">
+									<img src="https://flagsapi.com/AU/flat/64.png" alt="country flag" class="form-converter__icon">
+									<select name="form[]" class="form-converter__select form-converter__select_from"></select>
+								</div>
+							</div>
+							<button type="button" class="form-converter__exchange-icon">
+								<img src="img/exchange-icon.svg" alt="exchange-icon">
+							</button>
+							<div class="form-converter__line">
+								<input autocomplete="off" type="text" value="1" name="form[]" placeholder="" class="form-converter__input form-converter__input_to">
+								<div class="form-converter__select-block">
+									<img src="https://flagsapi.com/UA/flat/64.png" alt="country flag" class="form-converter__icon">
+									<select name="form[]" class="form-converter__select form-converter__select_to"></select>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+			<section class="page__slider-block slider-block">
+				<div class="slider-block__container">
+					<!-- Оболочка слайдера -->
+					<div class="slider-block__slider">
+						<!-- Двигающееся часть слайдера -->
+						<div class="slider-block__wrapper">
+							<!-- Слайд -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__todo todo-list">
+				<div class="todo-list__container">
+
+					<div class="todo-list__row">
+						<div class="todo-list__col">
+							<form action="#" class="todo-list__form">
+								<div class="todo-list__input-group">
+									<div class="todo-list__body">
+										<input type="text" class="todo-list__form-control" placeholder="Todo" id="todo-input">
+										<a href="#" class="todo-list__search"><img src="img/search-icon.svg" alt="search-icon"></a>
+									</div>
+									<button class="todo-list__btn btn">Add task</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="todo-list__row">
+						<ul class="todo-list__list-group">
+							<!-- <li class="list-group-item">A second item</li> -->
+						</ul>
+					</div>
+
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
