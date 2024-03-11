@@ -384,3 +384,94 @@ body {
 .radiobuttons__input:checked + .radiobuttons__label::after {
 	transform: scale(1);
 }
+//========================================================================================================================================
+.counter-block__btn[disabled] {
+	background-color: grey;
+	color: lightgrey;
+	box-shadow: none;
+}
+.submenu {
+	position: fixed;
+	z-index: 10;
+	// width: 100%;
+	// height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+
+	// .submenu_active
+	&_active {
+		display: block;
+	}
+
+	// .submenu__body
+	&__body {
+		padding: rem(40);
+		background-color: #000;
+		display: inline-block;
+		border-radius: rem(5);
+	}
+
+	// .submenu__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+	}
+
+	// .submenu__item
+	&__item {
+	}
+
+	// .submenu__link
+	&__link {
+		display: block;
+		padding: rem(20);
+		border: 1px solid rgba(211, 211, 211, 0.627);
+		border-radius: rem(5);
+		transition: all 0.3s ease 0s;
+		&:hover {
+			box-shadow: inset 0px 0px 15px 0px rgba(211, 211, 211, 0.627);
+			// color: $mainBlack;
+		}
+	}
+}
+//========================================================================================================================================================
+
+.square {
+	// .square__container
+	&__container {
+		height: rem(200);
+		position: relative;
+	}
+
+	// .square__body
+	&__body {
+		width: rem(50);
+		height: rem(50);
+		background-color: #0caa1d;
+		position: absolute;
+		top: 50px;
+		left: 15px;
+	}
+}
+//=================================================================================================================================
+.square-mouse {
+	// .square-mouse__container
+	&__container {
+		max-width: 50%;
+		height: rem(200);
+		position: relative;
+	}
+
+	// .square-mouse__body
+	&__body {
+		cursor: grabbing;
+		width: rem(50);
+		height: rem(50);
+		background-color: #125219;
+		position: absolute;
+		top: 50px;
+		left: 15px;
+	}
+}
