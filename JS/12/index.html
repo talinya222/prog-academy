@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>HW_12</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="page__main-block main-block">
+				<div class="main-block__container">
+					<form action="#" class="main-block__form form">
+						<div class="form__line">
+							<div class="form__header">Change BG-color radiobutton</div>
+							<div class="form__body radiobuttons">
+								<div class="radiobuttons__item">
+									<input type="radio" name="nameradio" id="radio-1" class="radiobuttons__input">
+									<label class="radiobuttons__label" for="radio-1"><span></span></label>
+								</div>
+								<div class="radiobuttons__item">
+									<input type="radio" name="nameradio" id="radio-2" class="radiobuttons__input">
+									<label class="radiobuttons__label" for="radio-2"><span></span></label>
+								</div>
+								<div class="radiobuttons__item">
+									<input type="radio" name="nameradio" id="radio-3" class="radiobuttons__input">
+									<label class="radiobuttons__label" for="radio-3"><span></span></label>
+								</div>
+							</div>
+						</div>
+						<div class="form__line">
+							<div class="form__header">choose a hobby</div>
+							<div class="form__body checkbox">
+								<div class="checkbox__item">
+									<input type="checkbox" name="form[]" id="check-1">
+									<label for="check-1">reading</label>
+								</div>
+								<div class="checkbox__item">
+									<input type="checkbox" name="form[]" id="check-2">
+									<label for="check-2">sports</label>
+								</div>
+								<div class="checkbox__item">
+									<input type="checkbox" name="form[]" id="check-3">
+									<label for="check-3">music</label>
+								</div>
+							</div>
+						</div>
+						<div class="form__line">
+							<div class="form__header">selecting a country from the drop-down list</div>
+							<div class="form__body form__body_select">
+								<select name="form[]" class="form__select-block">
+								</select>
+								<div class="form__country-info">Country Info</div>
+							</div>
+						</div>
+						<div class="form__line">
+							<textarea name="form[]" class="form__textarea"></textarea>
+						</div>
+						<div class="form__line">
+							<div class="form__header">Please rate this work from 1 to 5</div>
+							<div class="form__body form__body_rating">
+								<div class="form__rating rating">
+									<div class="rating__items">
+										<input class="rating__item" type="radio" value="5" name="rating" id="rating-5">
+										<label class="rating__label" for="rating-5"></label>
+										<input class="rating__item" type="radio" value="4" name="rating" id="rating-4">
+										<label class="rating__label" for="rating-4"></label>
+										<input class="rating__item" type="radio" value="3" name="rating" id="rating-3">
+										<label class="rating__label" for="rating-3"></label>
+										<input class="rating__item" type="radio" value="2" name="rating" id="rating-2">
+										<label class="rating__label" for="rating-2"></label>
+										<input class="rating__item" type="radio" value="1" name="rating" id="rating-1">
+										<label class="rating__label" for="rating-1"></label>
+									</div>
+								</div>
+								<div class="form__count">0</div>
+							</div>
+						</div>
+					</form>
+					<div class="page__square-mouse square-mouse" style="padding-bottom: 100px;">
+						<div class="square-mouse__container">
+							<h2 style="font-weight: 500; line-height: 150%; text-transform: uppercase; padding-bottom: 15px;">'onMouseDown' і 'onMouseUp'</h2>
+							<div class="square-mouse__body"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
