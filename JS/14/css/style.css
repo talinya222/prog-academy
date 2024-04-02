@@ -1,0 +1,274 @@
+/* 
+&display=swap
+&subset=cyrillic-ext */
+
+/*--- ОБНУЛЕНИЕ СТИЛЕЙ ------------------------------------------------------------------ */
+/*========================================================================================================================================================*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {}
+
+body {
+	line-height: 1;
+	font-family: "Arial", sans-serif;
+	color: #4b4b4b;
+	background-color: #f5f5f5;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.lock body {
+	overflow: hidden;
+	touch-action: none;
+	pointer-events: none;
+}
+
+.lock body::after {
+	content: "";
+	background-color: rgba(168, 168, 168, 0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity .3s ease 0s;
+
+}
+
+.lock body.popup-show::after {
+	opacity: 1;
+}
+
+.lock .popup {
+	overflow: auto;
+	pointer-events: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	z-index: 1;
+}
+
+.lock .popup__content_loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lock .popup__content_loader::before {
+	content: "";
+	width: 50px;
+	height: 50px;
+	border: 5px solid #000000;
+	border-top-color: transparent;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/*======================================================================================================================================*/
+[class*="__container"] {
+	max-width: 1050px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+/*======================================================================================================================================*/
+.registration {
+	padding: 3.125rem 0px 9.375rem;
+}
+
+.registration__container {}
+
+.registration__body {
+	background-color: #5d62b5;
+	border-radius: 2.5rem;
+	padding: 3.5rem 3.125rem;
+	text-align: center;
+}
+
+.registration__title {
+	font-size: 2.25rem;
+	font-weight: 900;
+	line-height: 117%;
+	color: #fff;
+}
+
+.registration__title:not(:last-child) {
+	margin: 0px 0px 3.125rem 0px;
+}
+
+.registration__form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.registration__line {
+	position: relative;
+}
+
+.registration__input {
+	width: 100%;
+	padding: 1.0625rem 6.25rem 0.9375rem 1.25rem;
+	border: 2px solid #fff;
+	border-radius: 0.625rem;
+	background-color: rgba(93, 98, 181, 0.8);
+	line-height: 150%;
+	letter-spacing: 0.15px;
+	color: #fff;
+
+}
+
+.registration__label {
+	position: absolute;
+	top: 50%;
+	left: 1.25rem;
+	transform: translateY(-50%);
+	cursor: text;
+	transition: opacity 0.3s ease 0s;
+}
+
+.registration__label span {
+	letter-spacing: 0.15px;
+	color: #fff;
+}
+
+.registration__input:focus {
+	outline: none;
+	box-shadow: inset 0px 0px 10px 0px #acacac, 0px 0px 0px 1px #fff;
+}
+
+/*======================================================================================================================================*/
+._valid {
+	line-height: 48px;
+}
+
+._valid::after {
+	position: absolute;
+	content: "";
+	display: inline-block;
+	height: 10px;
+	width: 18px;
+	border-left: 4px solid;
+	border-bottom: 4px solid;
+
+	transform: translateY(-50%)rotate(-45deg);
+
+	right: 1rem;
+	top: 50%;
+	color: #73bb73;
+	animation: fadeIn 0.5s ease 0s;
+
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.registration__img {
+	position: absolute;
+	width: 35px;
+	height: 30px;
+	top: 50%;
+	right: 3.5rem;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+/*======================================================================================================================================*/
+.registration__button {
+	display: block;
+	margin: 0px 0px 0px auto;
+	padding: 0.75rem 4.125rem;
+	background-color: #f2726f;
+	border: 2px solid transparent;
+	border-radius: 0.5rem;
+	font-size: 0.75rem;
+	font-weight: 700;
+	line-height: 200%;
+	letter-spacing: 0.15px;
+	text-transform: uppercase;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.registration__button[disabled] {
+	filter: grayscale(1);
+	pointer-events: none;
+}
+
+.registration__button:focus {
+	outline: none;
+	box-shadow: 0px 0px 0px 1px #fff;
+}
+
+/*======================================================================================================================================*/
