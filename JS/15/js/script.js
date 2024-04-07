@@ -283,8 +283,8 @@ function showContent(page) {
 		}
 
 		function checkLoading() {
-			var bottomCoord = lastCard.getBoundingClientRect().bottom;
-			var height = document.documentElement.clientHeight;
+			let bottomCoord = lastCard.getBoundingClientRect().bottom;
+			let height = document.documentElement.clientHeight;
 			if (height >= bottomCoord) {
 				loader();
 			}
