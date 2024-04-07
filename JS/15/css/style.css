@@ -1,0 +1,415 @@
+/* 
+&display=swap
+&subset=cyrillic-ext */
+
+/*--- ОБНУЛЕНИЕ СТИЛЕЙ ------------------------------------------------------------------ */
+/*========================================================================================================================================================*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {}
+
+body {
+	line-height: 1;
+	font-family: "Roboto", sans-serif;
+	color: #4b4b4b;
+	background-color: #f5f5f5;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+/*===========================================================================================================================================*/
+[class*="__container"] {
+	max-width: 1050px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+/*===========================================================================================================================================*/
+.page__favourite-colour-block {}
+
+.page__todo {}
+
+.page__planets {}
+
+/*===========================================================================================================================================*/
+.favourite-colour-block {
+	padding: 5% 0 2.5%;
+}
+
+.favourite-colour-block__container {}
+
+.favourite-colour-block__form {}
+
+/*===========================================================================================================================================*/
+.form {
+	max-width: 50%;
+	margin: 0 auto;
+	background-color: rgb(189, 150, 181);
+	padding: 5% 2%;
+}
+
+.form:not(:last-child) {
+	margin-bottom: 5%;
+}
+
+.form__line {}
+
+.form__line:not(:last-child) {
+	margin-bottom: 1.5rem;
+}
+
+.form__header {
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 120%;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.form__header:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.form__body {
+	display: flex;
+	column-gap: 1rem;
+	align-items: center;
+}
+
+/* radiobuttons =========================================================================================================================*/
+.radiobuttons {}
+
+.radiobuttons__item {
+	position: relative;
+}
+
+.radiobuttons__input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.radiobuttons__label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.5rem;
+	height: 1.5rem;
+	border: 1px solid orange;
+	background-color: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+label[for="radio-1"] {
+	border-color: darkred;
+}
+
+label[for="radio-2"] {
+	border-color: darkgreen;
+}
+
+label[for="radio-3"] {
+	border-color: darkblue;
+}
+
+.radiobuttons__label span {
+	width: 1rem;
+	height: 1rem;
+	background-color: blue;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+}
+
+label[for="radio-1"] span {
+	background-color: red;
+}
+
+label[for="radio-2"] span {
+	background-color: green;
+}
+
+label[for="radio-3"] span {
+	background-color: blue;
+}
+
+
+.radiobuttons__input:focus+.radiobuttons__label {
+	outline: none;
+}
+
+.radiobuttons__input:checked+.radiobuttons__label>span {
+	transform: scale(1);
+}
+
+/* TO-DO =====================================================================================================================================*/
+
+.todo-list {
+	padding: 2.5% 0;
+}
+
+.todo-list__container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.todo-list__row {}
+
+.todo-list__col {}
+
+.todo-list__form {}
+
+.todo-list__input-group {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+}
+
+.todo-list__body {
+	flex: 1 1 auto;
+	position: relative;
+}
+
+.todo-list__form-control {
+	width: 100%;
+	padding: 1rem 3rem 1rem 1rem;
+	border-radius: 6px;
+	font-size: 1.5rem;
+}
+
+.todo-list__search {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	top: 50%;
+	right: .5rem;
+	transform: translateY(-50%);
+}
+
+.todo-list__search img {
+	max-width: 100%;
+
+}
+
+.btn {
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-weight: 500;
+	line-height: 150%;
+	text-transform: uppercase;
+	padding: 17px 40px;
+	background-color: #000;
+	border-radius: 6px;
+	box-shadow: 0px 9px 14px 0px rgba(0, 0, 0, 0.25);
+	transition: all 0.3s ease 0s;
+	color: #fff;
+}
+
+.btn:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.btn:active {
+	box-shadow: none;
+	background-color: #fff;
+	color: #000;
+}
+
+.bg-danger {
+	background-color: #ff0000;
+}
+
+.todo-list__list-group {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.list-group-item {
+	padding: 1rem;
+	border-radius: 6px;
+	font-size: 1.5rem;
+	background-color: #fff;
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+}
+
+.list-group-user-text {
+	flex: 1 1 auto;
+	max-width: 30rem;
+}
+
+.list-group-delete-btn {
+	background-color: red;
+}
+
+._hide {
+	display: none;
+}
+
+/* Planets =====================================================================================================================================*/
+.cards-list {
+	padding: 2.5% 0;
+}
+
+.cards-list__container {}
+
+.cards-list__items {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 2rem;
+	margin: 0 -2rem;
+}
+
+.cards-list__wrap {
+	flex: 0 1 50%;
+	padding: 0 2rem;
+}
+
+.cards-list__item {}
+
+/*===========================================================================================================================================*/
+.item-content {
+	padding: 2rem;
+	border-radius: 6px;
+	background-color: #fff;
+	height: 100%;
+}
+
+.item-content__title {
+	font-size: 1.625rem;
+	font-weight: 700;
+	line-height: 140%;
+	color: #001e42;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.item-content__title:not(:last-child) {
+	margin-bottom: .5em;
+}
+
+.item-content__body,
+.item-content__body a {
+	line-height: 140%;
+	color: #001e42;
+}
+
+.item-content__info,
+.item-content__links,
+.item-content__footer {
+	display: flex;
+	flex-direction: column;
+	gap: .3rem;
+}
+
+.item-content__info:not(:last-child),
+.item-content__links:not(:last-child),
+.item-content__footer:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+.item-content__info {}
+
+.item-content__rotation-period {}
+
+.item-content__orbital-period {}
+
+.item-content__diameter {}
+
+.item-content__climate {}
+
+.item-content__gravity {}
+
+.item-content__terrain {}
+
+.item-content__surface-water {}
+
+.item-content__population {}
+
+.item-content__links {}
+
+.item-content__resident-link,
+.item-content__film-link {
+	text-decoration: underline;
+	transition: color 0.3s ease 0s;
+	display: inline-block;
+}
+
+.item-content__resident-link:not(:last-child),
+.item-content__film-link:not(:last-child) {
+	margin-right: .5em;
+}
+
+.item-content__resident-link:hover,
+.item-content__film-link:hover {
+	text-decoration: underline;
+	color: #25acf0;
+}
+
+.item-content__residents {}
+
+.item-content__resident-link {}
+
+.item-content__films {}
+
+.item-content__film-link {}
+
+.item-content__footer {}
+
+.item-content__created {}
+
+.item-content__edited {}
+
+.item-content__item-link {}
