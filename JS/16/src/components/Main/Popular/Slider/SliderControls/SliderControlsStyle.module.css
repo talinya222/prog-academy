@@ -1,0 +1,37 @@
+.controls {
+	display: flex;
+	column-gap: 1.563rem;
+}
+
+.btn {
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	border: 0.125rem solid var(--main-white);
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.btn::after {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	border: solid var(--main-white);
+	border-width: 0 0.188rem 0.188rem 0;
+	padding: 0.188rem;
+	transform: rotate(-45deg);
+	margin: -0.188rem 0px 0px -0.188rem;
+	transition: all 0.3s ease 0s;
+}
+
+.prev::after {
+	transform: rotate(135deg);
+	margin: -0.188rem -0.188rem 0px 0px;
+
+}
+
+.btn:hover,
+.btn:hover::after {
+	border-color: var(--main-contrast);
+}

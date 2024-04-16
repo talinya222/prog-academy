@@ -1,0 +1,18 @@
+.header-wrap-acc-and-search {
+	flex: 1 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	column-gap: 2.813rem;
+}
+
+.header-search {
+	font-size: 2.063rem;
+	cursor: pointer;
+	color: var(--main-white);
+	transition: color 0.3s ease 0s;
+}
+
+.header-search:hover {
+	color: var(--main-contrast);
+}

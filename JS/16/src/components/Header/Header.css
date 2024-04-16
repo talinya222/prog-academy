@@ -1,0 +1,10 @@
+.header {
+	padding: 2.625rem 0;
+	min-height: 4.5rem;
+}
+
+.header .header__container {
+	max-width: 105rem;
+	display: flex;
+	column-gap: 1.25rem;
+}

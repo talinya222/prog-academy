@@ -1,0 +1,36 @@
+/*=========== POPULAR ===================================================================================================================*/
+.popular {
+	padding: 1.688rem 0px 3.125rem 0px;
+}
+
+/*=======================================================================================================================================*/
+.popular-header {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+	align-items: center;
+}
+
+.popular-header:not(:last-child) {
+	margin: 0px 0px 2rem 0px;
+}
+
+.popular-title {
+	flex: 1 0 auto;
+	font-size: 1.375rem;
+	font-weight: 800;
+	line-height: 144.523%;
+	letter-spacing: 0.186rem;
+	text-transform: uppercase;
+	color: var(--main-white);
+}
+
+.swiper-custom {
+	display: flex !important;
+	flex-direction: column-reverse;
+	gap: 2rem;
+}
+
+.slider-item {
+	display: block;
+}

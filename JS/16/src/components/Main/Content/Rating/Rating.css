@@ -1,0 +1,20 @@
+/*=======================================================================================================================================*/
+.content-rating {
+	padding: 0.625rem 0px;
+	display: flex;
+	column-gap: 0.875rem;
+}
+
+.content-rating:not(:last-child) {
+	margin: 0px 0px 2.813rem 0px;
+}
+
+.rating-item {
+	font-size: 32px;
+	cursor: pointer;
+	color: var(--main-white);
+}
+
+._filled {
+	color: var(--rating-filled);
+}

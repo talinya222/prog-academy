@@ -1,0 +1,11 @@
+.btn {
+	/* color: pink; */
+}
+
+.btn[disabled] {
+	filter: grayscale(1);
+}
+
+.active {
+	/* background-color: pink; */
+}

@@ -1,0 +1,27 @@
+/*=======================================================================================================================================*/
+.footer {}
+
+.footer__container {}
+
+.age-limit {
+	position: fixed;
+	bottom: 6.5rem;
+	right: 0;
+	background-color: var(--age-limit-bg);
+	height: 4.125rem;
+	padding: 0px 4.625rem 0px 0px;
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 141.523%;
+	color: var(--main-white);
+	display: flex;
+	align-items: center;
+	column-gap: 1.625rem;
+}
+
+.age-limit::before {
+	content: '';
+	width: 2.063rem;
+	height: 4.125rem;
+	background-color: var(--main-contrast);
+}

@@ -1,0 +1,23 @@
+/*=======================================================================================================================================*/
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1.25rem;
+	row-gap: 1.25rem;
+}
+
+.item {
+	font-size: 2rem;
+	font-weight: 500;
+	color: var(--main-white);
+	display: flex;
+	align-items: center;
+	column-gap: 1.25rem;
+}
+
+.item:not(:last-child)::after {
+	content: '';
+	background-color: var(--main-white);
+	width: 0.188rem;
+	height: 2.063rem;
+}

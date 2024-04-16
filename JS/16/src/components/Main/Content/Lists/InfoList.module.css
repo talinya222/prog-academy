@@ -1,0 +1,33 @@
+/*=======================================================================================================================================*/
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1.25rem;
+	row-gap: 1.25rem;
+}
+
+.item {
+	font-size: 1.813rem;
+	display: flex;
+	align-items: center;
+	column-gap: 1.25rem;
+}
+
+.item:not(:last-child)::after {
+	content: '';
+	background-color: var(--main-white);
+	width: 0.188rem;
+	height: 1.25rem;
+}
+
+.item:first-child,
+.text {
+	text-transform: uppercase;
+	font-size: 1.875rem;
+	font-weight: 500;
+	color: var(--main-white);
+}
+
+.item:last-child .text {
+	text-transform: lowercase;
+}
